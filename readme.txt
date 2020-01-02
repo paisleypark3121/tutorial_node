@@ -25,8 +25,10 @@ GIT
 - add all files: git add .
 - prepare the changes with a message associated: git commit -m "my message for the commit"
 - copy the URL from the repository created: git remote add origin https://github.com/MYACCOUNT/MYREPOSITORY.git
-- push the changes to the remote repository (the first time "master" is needed): git push -u origin master
+- push the changes to the remote repository (the first time "-u origin master" is needed): git push -u origin master
 - in order to ignore some files: create a .gitignore file and add the following lines:
 .gitignore
 /folder1_name_to_be_ignored
 /folder2_name_to_be_ignored
+- create a branch: git branch name_of_the_branch
+- switch to the branch created: git checkout name_of_the_branch (at the bottom of vscode it will be displayed the active branch)
