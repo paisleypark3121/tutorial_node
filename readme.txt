@@ -41,3 +41,6 @@ git push --set-upstream origin name_of_the_branch
 - merge the branch to the master
 git checkout master
 git merge name_of_the_branch
+- check if local files are updated: git pull
+- if some creates a new branch i need to "fetch" it before checkout: git fetch origin
+- check the status: git status
