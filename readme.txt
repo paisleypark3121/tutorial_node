@@ -20,7 +20,13 @@ START
 - DEV: npm run dev
 
 GIT
-- Source Control Side Bar
-- create a file .gitignore and add the following code to avoid pushing node_modules folder
+- initialize: git init
+- add single files: git add filename1 filename2 
+- add all files: git add .
+- prepare the changes with a message associated: git commit -m "my message for the commit"
+- copy the URL from the repository created: git remote add origin https://github.com/MYACCOUNT/MYREPOSITORY.git
+- push the changes to the remote repository (the first time "master" is needed): git push -u origin master
+- in order to ignore some files: create a .gitignore file and add the following lines:
 .gitignore
-/node_modules
+/folder1_name_to_be_ignored
+/folder2_name_to_be_ignored
