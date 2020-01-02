@@ -12,3 +12,7 @@ app.listen(3000,() => {
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
+
+app.get('*',(req,res) => {
+    res.sendFile(path.join(__dirname,'./index.html'));
+});
