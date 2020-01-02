@@ -38,3 +38,6 @@ git commit -m 'message for the commit on the new branch'
 git push
 - the last push will provide an alert that will inform us that this push has to be performed on a new branch using the following command:
 git push --set-upstream origin name_of_the_branch
+- merge the branch to the master
+git checkout master
+git merge name_of_the_branch
