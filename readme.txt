@@ -50,6 +50,7 @@ HEROKU
 - create heroku app with a random name: heroku create
 - deploy: git push heroku master
 - open the application: heroku open
+- log analysis: heroku logs -n 200
 
 //////////////////////////////////////////////////////
 
