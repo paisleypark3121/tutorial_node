@@ -44,3 +44,33 @@ git merge name_of_the_branch
 - check if local files are updated: git pull
 - if some creates a new branch i need to "fetch" it before checkout: git fetch origin
 - check the status: git status
+
+HEROKU
+- login: heroku login
+- create heroku app with a random name: heroku create
+- deploy: git push heroku master
+- open the application: heroku open
+
+//////////////////////////////////////////////////////
+
+SAMPLE CODE - index.js
+
+const bodyParser = require('body-parser');
+const path = require('path');
+const express = require('express');
+const app = express();
+app.use(bodyParser.json());
+
+// please note that it is necessary to put this OR case otherwise the app won't run on heroku; locally the port can be whatever
+app.listen(process.env.PORT || 3000,() => {
+    console.log('listening');
+});
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
+
+// this to allow static file requests
+app.get('*',(req,res) => {
+    res.sendFile(path.join(__dirname,'./index.html'));
+});
+
